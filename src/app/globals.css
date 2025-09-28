@@ -1,0 +1,169 @@
+:root {
+    --bg-dark: #1a1a2e;
+    --accent-pink: #ff66cc;
+    --accent-purple: #b266ff;
+    --text-light: #f0e6ff;
+    --shadow-neon: 0 0 10px var(--accent-pink), 0 0 20px var(--accent-purple);
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 2rem;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, rgba(255, 102, 204, 0.1), rgba(178, 102, 255, 0.1));
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: var(--shadow-neon);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--accent-pink);
+    text-shadow: 0 0 5px var(--accent-pink);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.input-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-purple);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(240, 230, 255, 0.5);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: var(--shadow-neon);
+    border-color: var(--accent-pink);
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background: var(--accent-purple);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent-pink);
+    box-shadow: var(--shadow-neon);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-purple);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--accent-pink);
+    border-color: var(--accent-pink);
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgba(240, 230, 255, 0.5);
+}
+
+.delete-btn,
+.cancel-btn {
+    margin-left: auto;
+    background: transparent;
+    color: var(--accent-pink);
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.delete-btn:hover,
+.cancel-btn:hover {
+    background: rgba(255, 102, 204, 0.2);
+    box-shadow: none;
+}
+
+.edit-btn,
+.save-btn {
+    background: var(--accent-purple);
+    color: var(--text-light);
+}
+
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filters button {
+    padding: 0.5rem 1rem;
+}
+
+.filters .active {
+    background: var(--accent-pink);
+    box-shadow: var(--shadow-neon);
+}
+
+.clear {
+    margin-left: auto;
+    background: var(--accent-pink);
+}
